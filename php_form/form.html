@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 30%;
+            min-width: 300px;
+        }
+
+        form > input, button, select {
+            padding: 10px 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Login Form</h2>
+    <form action="insert.php" method="POST">
+        <input type="text" name="name" placeholder="Name">  
+        <input type="email"name="email"  placeholder="name@gmail.com">   
+        <label for="">Gender :</label>  
+        <label><input type="radio" name="gender" value="m"> Male  </label>
+        <label><input type="radio" name="gender" value="f"> Female  </label>
+        <label><input type="radio" name="gender" value="o"> Other  </label>
+        <label for="">Loaction:</label>
+        <select name="location" id="">
+            <option value="">Select</option>
+            <option value="West Bengal">West Bengal</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Odisha">Odisha</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
