@@ -35,9 +35,10 @@
         <input type="text" name="name" placeholder="Name">  
         <input type="email"name="email"  placeholder="name@gmail.com">   
         <label for="">Gender :</label>  
-        <label><input type="radio" name="gender" value="m"> Male  </label>
-        <label><input type="radio" name="gender" value="f"> Female  </label>
-        <label><input type="radio" name="gender" value="o"> Other  </label>
+        <label><input type="radio" name="gender" value="male"> Male  </label>
+        <label><input type="radio" name="gender" value="female"> Female  </label>
+        <label><input type="radio" name="gender" value="other"> Other  </label>
+        <!-- <input type="text" name="address" placeholder="address">  -->
         <label for="">Loaction:</label>
         <select name="location" id="">
             <option value="">Select</option>
@@ -46,6 +47,11 @@
             <option value="Karnataka">Karnataka</option>
             <option value="Odisha">Odisha</option>
         </select>
+        <label for="">Language: </label>
+        <label><input type="checkbox" name="lan[]" value="Python">Python</label>
+        <label><input type="checkbox" name="lan[]" value="Java">Java</label>
+        <label><input type="checkbox" name="lan[]" value="JavaScript">JavaScript</label>
+        <label><input type="checkbox" name="lan[]" value="PHP">PHP</label>
         <button type="submit">Submit</button>
     </form>
 </body>

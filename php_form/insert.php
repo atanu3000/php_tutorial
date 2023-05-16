@@ -3,22 +3,31 @@
 $connect = mysqli_connect("localhost", "root", "", "atanu_form");
 
 $name = $_POST['name'];
-echo $name;
-echo "<br>";
-
 $email = $_POST['email'];
-echo $email;
-echo "<br>";
-
 $gender = $_POST['gender'];
-echo $gender;
-echo "<br>";
-
 $location = $_POST['location'];
-echo $location;
-echo "<br>";
 
-$row = "INSERT student SET name='$name', email='$email',  gender='$gender', location='$location'";
+// echo $name; // printing data
+// echo "<br>";
+
+// echo $email;
+// echo "<br>";
+
+// echo $gender;
+// echo "<br>";
+
+// echo $location;
+// echo "<br>";
+
+$s = "";
+
+if(isset($_POST['lan'])) {
+    $s = implode(",",$_POST['lan']);
+   echo $s;
+}
+
+$row = "INSERT INTO student SET name='$name', email='$email',  gender='$gender', location='$location',language='$s'";
 $connect->query($row);
 
+header("location: listening.php");
 ?>
